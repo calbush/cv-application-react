@@ -22,10 +22,39 @@ class App extends React.Component {
         e.preventDefault()
         let firstName = document.getElementById('firstName').value
         let lastName = document.getElementById('lastName').value
+        let email = document.getElementById('email').value
+        let phone = document.getElementById('phoneNum').value
+
+        let school = document.getElementById('school').value
+        let study = document.getElementById('titleOfStudy').value
+        let start = document.getElementById('startDate').value
+        let end = document.getElementById('endDate').value
+
+        let company = document.getElementById('company').value
+        let position = document.getElementById('position').value
+        let jobStart = document.getElementById('jobStartDate').value
+        let jobEnd = document.getElementById('jobEndDate').value
+        let duties = document.getElementById('duties').value
+
         this.setState({
             personal : {
-                firstName : firstName,
-                lastName : lastName,
+                firstName,
+                lastName,
+                email,
+                phone,
+            },
+            educational : {
+                school,
+                study,
+                start,
+                end,
+            },
+            practical : {
+                company,
+                position,
+                jobStart,
+                jobEnd,
+                duties,
             }
             
         })
@@ -40,7 +69,9 @@ class App extends React.Component {
                     <Practical />
                     <Submit />
                 </form>
-                <CV passin={this.state}/>
+                <div className="cvTemplate">
+                    <CV passin={this.state}/>
+                </div>
             </div>
         )
     }
