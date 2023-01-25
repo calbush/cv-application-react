@@ -3,7 +3,7 @@ import Personal from './personal'
 import Educational from './educational'
 import Practical from './practical'
 import Submit from './submit'
-import CV from './cv'
+import PersonalComp from './Render-Personal'
 
 
 class App extends React.Component {
@@ -63,14 +63,14 @@ class App extends React.Component {
     render(){
         return (
             <div className="App">
-                <form onSubmit={this.onSubmitBtnClicked}>
+                <form onSubmit={this.onSubmitBtnClicked} className='form'>
                     <Personal />
                     <Educational />
                     <Practical />
                     <Submit />
                 </form>
                 <div className="cvTemplate">
-                    <CV passin={this.state}/>
+                    <PersonalComp data={this.state}/>
                 </div>
             </div>
         )
