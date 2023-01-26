@@ -3,7 +3,8 @@ import Personal from './personal'
 import Educational from './educational'
 import Practical from './practical'
 import Submit from './submit'
-import PersonalComp from './Render-Personal'
+import PersonalComp from './PersonalComp'
+import EducationalComp from './EducationalComp'
 
 
 class App extends React.Component {
@@ -12,9 +13,17 @@ class App extends React.Component {
 
         this.state = {
             personal : {
-                firstName : '',
-                lastName : '',
-            }
+                firstName : 'John',
+                lastName : 'Doe',
+                email : 'John@doe.com',
+                phone : '123-867-5309'
+            },
+            educational : {
+                school : 'blah',
+                study : 'cool',
+                start : 'September 2020',
+                end : 'December 2022',
+            },
         }
     }
 
@@ -71,6 +80,7 @@ class App extends React.Component {
                 </form>
                 <div className="cvTemplate">
                     <PersonalComp data={this.state}/>
+                    <EducationalComp data={this.state}/>
                 </div>
             </div>
         )
