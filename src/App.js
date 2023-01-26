@@ -19,11 +19,18 @@ class App extends React.Component {
                 phone : '123-867-5309'
             },
             educational : {
-                school : 'blah',
-                study : 'cool',
+                school : 'Doesn\'t Exist University',
+                study : 'Underwater Basketweaving',
                 start : 'September 2020',
                 end : 'December 2022',
             },
+            practical : {
+                company : 'Earth',
+                position : 'Person',
+                jobStart : 'September 1996',
+                jobEnd : 'Present',
+                duties : 'Living life to the fullest'
+            }
         }
     }
 
