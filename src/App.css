@@ -13,6 +13,7 @@
 }
 
 .cvTemplate {
+    padding: 75px 50px 75px 50px;
     border-style: solid;
     border-color: black;
     width: 850px;
@@ -21,15 +22,15 @@
 
 .contactInfoContainer {
     display: flex;
-}
-
-.nameCV {
-    font-size: 40px;
     border-style: double;
     border-top: 0rem;
     border-left: 0rem;
     border-right: 0rem;
     border-color: red;
+}
+
+.nameCV {
+    font-size: 40px;
 }
 
 .contactInfoContainer {
